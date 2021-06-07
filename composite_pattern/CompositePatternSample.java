@@ -79,11 +79,9 @@ class CompositeAccount extends Account {
 
 public class CompositePatternSample {
     public static void main(String[] args) {
-        SalaryAccount salAcc = new SalaryAccount("1234", 100);
-        SavingsAccount savAcc = new SavingsAccount("5678", 20);
         CompositeAccount myAcc = new CompositeAccount();
-        myAcc.addAccount(salAcc);
-        myAcc.addAccount(savAcc);
+        myAcc.addAccount(new SalaryAccount("1234", 100));
+        myAcc.addAccount(new SavingsAccount("5678", 20));
         System.out.println(myAcc.getBalance());
     }
 }
